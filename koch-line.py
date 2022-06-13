@@ -26,12 +26,13 @@ my_turtle.backward(line_length / 2);
 my_turtle.pendown()
 
 # The total length of line that has been drawn
-len_drawn = [0]
+len_drawn = 0
 
 def koch_line(length, level):
+    global len_drawn
     if (level == 1):
         my_turtle.forward(length)
-        len_drawn[0] += length
+        len_drawn += length
     else:
         koch_line(length / 3, level - 1)
         my_turtle.left(60)
@@ -55,6 +56,6 @@ if (draw_snowflake):
     koch_snowflake(line_length, line_depth)
 else:
     koch_line(line_length, line_depth)
-print(f'In all, we have drawn koch lines of total length {round(len_drawn[0], 2)}')
+print(f'In all, we have drawn koch lines of total length {round(len_drawn, 2)}')
 print('Done!')
 turtle.done()
