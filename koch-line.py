@@ -17,6 +17,7 @@ my_turtle = turtle.Turtle()
 my_turtle.pencolor('white')
 my_turtle.width(2)
 my_turtle.hideturtle()
+my_turtle.speed('fastest')
 
 my_screen = turtle.Screen()
 my_screen.screensize(canv_length, canv_length, '#2d2d2d')
